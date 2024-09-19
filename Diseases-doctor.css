@@ -1,0 +1,143 @@
+
+.container{
+    width: 525px;
+    height: 220px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.top{
+    
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    border-bottom: 1px solid gray;
+}
+    
+
+.img-container{
+      
+}
+
+.img-container .doctor_img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.details .doctor-name{
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(246, 140, 66);
+}
+
+.details .doctor-studies{
+    color: rgb(126, 126, 126);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* .details .registration{
+    color: rgb(126, 126, 126);
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.details .number{
+    margin-top: 0;
+    font-size: 15px;
+    font-size: 700;
+} */
+
+/* .details .languages{
+    font-size: 14px;
+    font-size: 700;
+} */
+
+.details .experience{
+    display: flex;
+    align-items: center;
+}
+
+.details .experience img{
+    width: 30px;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.details .experience .exp{
+    margin-top: 0;
+    font-size: 15px;
+    color: rgb(126, 126, 126);
+    margin-bottom: 0;
+}
+
+.location{
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.location .location-img{
+    margin-top: 0;
+    width:25px;
+    height:25px;  
+    margin-right: 14px;
+}
+
+.location .location-desp{
+    color:rgb(126, 126, 126);
+    font-size: 15px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.bottom{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.timings{
+   margin-left: 15px;
+}
+.timings .day{
+    color:rgb(93, 93, 93);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.timings .time{
+    color:rgb(93, 93, 93);
+    margin-top: 0px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.book-button{
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    width: 50%;
+    border-width: 0.8px;
+    border-style:solid;
+    border-color: rgb(2, 69, 148);
+    border-radius: 20px;
+    color: rgb(2, 69, 148);
+    cursor: pointer;
+
+    margin-left: 200px;
+}
+
+.book-button:hover{
+    background-color: rgb(2, 69, 148);
+    color: white;
+}

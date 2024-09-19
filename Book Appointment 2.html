@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Appointment</title>  
+  <link rel="stylesheet" href="header_goku.css">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid rgb(78, 157, 114);
+      padding: 5px;
+      text-align: center;
+    }
+    th {
+      background-color:rgb(78, 157, 114);
+    }
+    .pros th, .pros td {
+      text-align: center;
+    }
+    body { 
+    color: rgb(0, 0, 0); 
+  }
+  .unfilled {
+  border: 2px solid red; 
+}
+.blue-button {
+  background-color: rgb(0, 183, 255);
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+}
+
+.blue-button:hover {
+  background-color: rgb(0, 123, 255); 
+}
+
+  </style>
+</head>
+<body bgcolor="whitesmoke" align="center">
+  <table>
+  <tr style="text-align: center;">
+    <td style="padding: 80px; border-color: whitesmoke; background-color: white;">
+      <div class="header">
+        <div class="left">
+            <div class="img-div"><a href="./Hospital.html"><img class="img" src="./image/logo_skar.jpg"></a></div>
+        </div>
+        <div class="middle">
+            <marquee onmouseover="this.stop();" onmouseout="this.start();" scrollamount="12" class="marquee-class" >
+                <img class="marquee-img" src="./image/Maequee-img.png" width="25" height="25">
+                <span class="marquee-text">NO 1 Hospital in India</span>
+            </marquee>
+        </div>
+        <div class="right">
+            <button class="emergency">Emergency<p>108</p></button>
+            <button class="email">Email<p>skar@gmail.com</p></button>
+        </div>
+    </div>
+
+    <div class="menu-bar">
+      <ul>
+        <li><a href="./Find A Doctor.html">Find a Doctor</a>
+        </li>
+        <li><a href="#">Centers of Excellence &#x25BE;</a>
+          <div class="dropdown-menu">
+            <ul>
+              <li><a href="./CARDIOLOGY.html">Cardiology</a></li>
+              <li><a href="./STENTS.html">Stent</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#">Health Information &#x25BE;</a>
+          <div class="dropdown-menu">
+            <ul>
+              <li><a href="./Diseases and Conditions.html">Diseases and Conditions</a></li>
+              <li><a href="./Procedure.html">Procedures</a></li>
+              <li><a href="./Health Technology.html">Health Technology</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#">International patient &#x25BE;</a>
+          <div class="dropdown-menu">
+            <ul>
+              <li><a href="./international_patient.html">Plan Your Trip</a></li>
+              <li><a href="./consult_online_varun.html">Online Consultation</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#">Academics & Research &#x25BE;</a>
+          <div class="dropdown-menu">
+            <ul>
+              <li><a href="./honors_list.html">Honors List</a></li>
+              <li><a href="./new_in_medicine.html">New in Medicine</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="./contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+    
+    <table>
+      <tr>
+        <td padding: 0px  style="border-color: white;">
+          <img src=".apollodoc.png" height="700" width="500" style="margin-top: 0px;">
+        </td>
+        <td style="border-color: white; text-align: left;">
+
+        <form id="myForm">
+            <table style="font-size: 16px;">
+        <tr>
+          <td  style="border-color: white;">
+          
+            <input type="text" id="Name" name="Name" placeholder="Name*" style="width:350px; height:50px; font-size: 20px; text-align: center;">
+      </td>
+      <td  style="border-color: white;">
+
+        <input type="number" id="number" name="Phone Number" placeholder="Phone Number*" style="width:350px; height:50px; font-size: 20px; text-align: center;">
+  </td>
+        </tr>
+<tr>
+    <td  style="border-color: white;">
+
+          <input type="email" id="email" name="email" placeholder="Email Address*" style="width:350px; height:50px; font-size: 20px; text-align: center;">
+    </td>
+    <td style="border-color: white;">
+      <select id="country" name="country" style="width:350px; height:50px; font-size: 20px; text-align: center;">
+        <option value="">-- Select Country --</option>
+
+      </select>
+    </td>
+</tr>
+<tr>
+  <td style="border-color: white;">
+  <select id="state" name="state" disabled style="width:350px; height:50px; font-size: 20px; text-align: center;">
+    <option value="">-- Select State --</option>
+
+  </select>
+</td>
+<td style="border-color: white;">
+  <select id="city" name="city" disabled style="width:350px; height:50px; font-size: 20px; text-align: center;">
+    <option value="">-- Select City --</option>
+
+  </select>
+<br>
+</td>
+</tr>
+
+        <tr>
+            <td style="border-color: white;">
+              <select id="hospital" name="hospital" disabled style="width:350px; height:50px; font-size: 20px; text-align: center;">
+                <option value="">-- Select Hospital --</option>
+              </select>
+          <br>
+        </td>
+        <td style="border-color: white;">
+
+          
+          <select style="width: 350px; height: 55px; font-size: 20px; text-align: center;" id="question3" name="question3" disabled>
+            <option value="">-- Select Speciality --</option>
+            <option value="cardiology">Cardiology</option>
+            <option value="oncology">Oncology</option>
+            <option value="neurology">Neurology</option>
+            <option value="gastroenterology">Gastroenterology</option>
+            <option value="orthopedics">Orthopedics</option>
+            <option value="dermatology">Dermatology</option>
+            <option value="endocrinology">Endocrinology</option>
+            <option value="ent">Ear, Nose & Throat</option>
+            <option value="general surgery">General Surgery</option>
+            <option value="nephrology">Nephrology</option>
+            <option value="neurosurgery">Neurosurgery</option>
+            <option value="urology">Urology</option>
+            <option value="ophthalmology">Ophthalmology</option>
+            <option value="pulmonology">Pulmonology</option>
+            <option value="rheumatology">Rheumatology</option>
+            <option value="internal medicine">Internal Medicine</option>
+            <option value="critical care">Critical Care</option>
+            <option value="radiation oncology">Radiation Oncology</option>
+            <option value="not_sure">Not Sure Of Speciality</option>
+            <option value="other">Other Specialties</option>
+          </select>
+          <br>
+        </td>
+            </tr>
+        </table>
+        </form>
+      
+      <br>
+      <center>
+      <img src=logo.png width="300" height="300">
+      </center>
+      <center>
+    
+        <button style="height: 45px; width: 150px; font-size: 20px;" type="submit" id="submitButton" class="blue-button" disabled>Submit</button>
+    </center> 
+      </td>
+    </tr> 
+    </table>    
+
+      <script>
+        var countryDropdown = document.getElementById('country');
+var stateDropdown = document.getElementById('state');
+
+var countries = {
+  "United States of America": ["California", "New York", "Texas"],
+  "Canada": ["Ontario", "Quebec", "British Columbia"],
+  "United Kingdom": ["England", "Scotland", "Wales"],
+  "Australia": ["New South Wales", "Victoria", "Queensland"],
+  "Germany": ["Bavaria", "North Rhine-Westphalia", "Baden-Württemberg"],
+  "France": ["Île-de-France", "Provence-Alpes-Côte d'Azur", "Auvergne-Rhône-Alpes"],
+  "Brazil": ["São Paulo", "Rio de Janeiro", "Minas Gerais"],
+  "India": ["Maharashtra", "Uttar Pradesh", "Karnataka"],
+  "China": ["Guangdong", "Shandong", "Henan"],
+  "Japan": ["Tokyo", "Osaka", "Hokkaido"],
+  "Mexico": ["Mexico City", "Jalisco", "Nuevo León"],
+  "South Africa": ["Gauteng", "Western Cape", "KwaZulu-Natal"],
+  "Russia": ["Moscow", "Saint Petersburg", "Tatarstan"],
+  "Italy": ["Lombardy", "Lazio", "Veneto"],
+  "Spain": ["Catalonia", "Andalusia", "Madrid"],
+  "Argentina": ["Buenos Aires", "Córdoba", "Santa Fe"],
+  "Indonesia": ["West Java", "East Java", "Central Java"],
+  "Nigeria": ["Lagos", "Kano", "Oyo"],
+  "Saudi Arabia": ["Riyadh", "Makkah", "Eastern Province"],
+  "Egypt": ["Cairo", "Alexandria", "Giza"]
+};
+
+Object.keys(countries).forEach(function(country) {
+  var option = document.createElement('option');
+  option.value = country;
+  option.textContent = country;
+  countryDropdown.appendChild(option);
+});
+
+countryDropdown.addEventListener('change', function() {
+  var selectedCountry = this.value;
+  if (selectedCountry) {
+
+    stateDropdown.disabled = false;
+
+    stateDropdown.innerHTML = '<option value="">-- Select State --</option>';
+
+    countries[selectedCountry].forEach(function(state) {
+      var option = document.createElement('option');
+      option.value = state;
+      option.textContent = state;
+      stateDropdown.appendChild(option);
+    });
+  } else {
+
+    stateDropdown.disabled = true;
+    stateDropdown.innerHTML = '<option value="">-- Select State --</option>';
+  }
+});
+var cityDropdown = document.getElementById('city');
+var hospitalDropdown = document.getElementById('hospital');
+
+var citiesAndHospitals = {
+  "New York": {
+    "New York City": [
+      "Lenox Hill Hospital",
+      "Mount Sinai Hospital",
+      "Montefiore Medical Center"
+    ],
+    "Albany": [
+      "Albany Medical Center",
+      "St. Peter's Hospital",
+      "Albany Memorial Hospital"
+    ],
+  },
+  "California": {
+    "Los Angeles": [
+      "Cedars-Sinai Medical Center",
+      "Stanford Health Care-Stanford Hospital",
+      "UCLA Medical Center"
+    ],
+    "San Francisco": [
+      "UCSF Health-UCSF Medical Center",
+      "UC San Francisco Benioff Children's Hospital",
+      "Zuckerberg San Francisco General Hospital"
+    ]
+  },
+  "Texas": {
+    "Houston": [
+      "Houston Methodist Hospital",
+      "UT Southwestern Medical Center"
+    ],
+    "Dallas": [
+      "Medical City McKinney",
+      "Baylor University Medical Center"
+    ]
+  },
+  "Ontario": {
+    "Toronto": [
+      "Sunnybrook Health Sciences Centre",
+      "Toronto General Hospital"
+    ],
+    "Thunder Bay": [
+      "Thunder Bay Regional Health Sciences Centre",
+      "Nipigon District Memorial Hospital"
+    ]
+  },
+  "Quebec": {
+    "Quebec City": [
+      "Hôpital Saint-François d'Assise",
+      "Hôpital de l'Enfant-Jésus",
+      "Jeffery Hale Hospital"
+    ]
+  },
+  "British Columbia": {
+    "Victoria": [
+      "Victoria General Hospital",
+      "Royal Jubilee Hospital"
+    ],
+    "Prince George": [
+      "University Hospital of Northern British Columbia (UHNBC)"
+    ]
+  },
+  "England": {
+    "London": [
+      "St Thomas' Hospital",
+      "King's College Hospital",
+      "Guy's Hospital"
+    ],
+    "Manchester": [
+      "Manchester Royal Infirmary",
+      "The Christie",
+      "Royal Manchester Children's Hospital"
+    ]
+  },
+  "Scotland": {
+    "Glasgow": [
+      "Queen Elizabeth University Hospital",
+      "Glasgow Royal Infirmary",
+      "Royal Hospital for Children"
+    ],
+    "Edinburgh": [
+      "Royal Infirmary of Edinburgh",
+      "Western General Hospital",
+      "Royal Hospital for Sick Children"
+    ]
+  },
+  "Wales": {
+    "Cardiff": [
+      "University Hospital of Wales",
+      "University Hospital Llandough",
+      "Velindre Cancer Centre"
+    ],
+    "Swansea": [
+      "Morriston Hospital",
+      "Singleton Hospital",
+      "Princess of Wales Hospital"
+    ]
+  },
+  "New South Wales": {
+    "Sydney": [
+      "Royal Prince Alfred Hospital",
+      "St Vincent's Hospital Sydney",
+      "Westmead Hospital"
+    ],
+    "Newcastle": [
+      "John Hunter Hospital",
+      "Calvary Mater Newcastle",
+      "The Maitland Hospital"
+    ]
+  },
+  "Victoria": {
+    "Melbourne": [
+      "Royal Melbourne Hospital",
+      "St Vincent's Hospital Melbourne",
+      "The Alfred Hospital"
+    ],
+    "Geelong": [
+      "University Hospital Geelong",
+      "St John of God Geelong Hospital",
+      "Epworth Geelong"
+    ]
+  },
+  "Queensland": {
+    "Brisbane": [
+      "Royal Brisbane and Women's Hospital",
+      "Princess Alexandra Hospital",
+      "Mater Hospital Brisbane"
+    ],
+    "Gold Coast": [
+      "Gold Coast University Hospital",
+      "Pindara Private Hospital",
+      "Gold Coast Private Hospital"
+    ]
+  },
+  "Bavaria": {
+    "Munich": [
+      "LMU Klinikum München",
+      "Klinikum der Universität München",
+      "Städtisches Klinikum München"
+    ],
+    "Nuremberg": [
+      "Klinikum Nürnberg",
+      "Klinikum Fürth",
+      "Klinikum Nürnberg-Süd"
+    ]
+  },
+  "North Rhine-Westphalia": {
+    "Cologne": [
+      "University Hospital of Cologne",
+      "HELIOS Hospital Cologne",
+      "Cologne-Merheim Hospital"
+    ],
+    "Düsseldorf": [
+      "University Hospital Düsseldorf",
+      "HELIOS University Hospital Wuppertal",
+      "Florence Nightingale Hospital Düsseldorf"
+    ]
+  },
+  "Baden-Württemberg": {
+    "Stuttgart": [
+      "Robert Bosch Hospital",
+      "Klinikum Stuttgart",
+      "Katharinenhospital"
+    ],
+    "Heidelberg": [
+      "University Hospital Heidelberg",
+      "Heidelberg Clinic",
+      "Diakonissenkrankenhaus Heidelberg"
+    ]
+  },
+  "Île-de-France": {
+    "Paris": [
+      "Pitié-Salpêtrière Hospital",
+      "Hôpital Cochin",
+      "Hôpital Européen Georges-Pompidou"
+    ],
+    "Versailles": [
+      "Centre Hospitalier de Versailles",
+      "Hôpital André Mignot",
+      "Centre Hospitalier Intercommunal de Poissy-Saint-Germain-en-Laye"
+    ]
+  },
+  "Provence-Alpes-Côte d'Azur": {
+    "Marseille": [
+      "Hôpital de la Timone",
+      "Hôpital de la Conception",
+      "Hôpital Nord Marseille"
+    ],
+    "Nice": [
+      "Centre Hospitalier Universitaire de Nice",
+      "Hôpital de Cimiez",
+      "Hôpital Saint-Roch"
+    ]
+  },
+  "Auvergne-Rhône-Alpes": {
+    "Lyon": [
+      "Hôpital Édouard Herriot",
+      "Hôpital de la Croix-Rousse",
+      "Hôpital Lyon Sud"
+    ],
+    "Grenoble": [
+      "CHU Grenoble Alpes",
+      "Hôpital Michallon",
+      "Polyclinique des Alpes"
+    ]
+  },
+  "São Paulo": {
+    "São Paulo": [
+      "Hospital das Clínicas da Faculdade de Medicina da USP",
+      "Hospital Israelita Albert Einstein",
+      "Hospital Sírio-Libanês"
+    ],
+    "Campinas": [
+      "Hospital das Clínicas da Unicamp",
+      "Hospital Samaritano Campinas",
+      "Hospital Renascença"
+    ]
+  },
+  "Rio de Janeiro": {
+    "Rio de Janeiro": [
+      "Hospital Municipal Souza Aguiar",
+      "Hospital Quinta D'Or",
+      "Hospital Samaritano Botafogo"
+    ],
+    "Niterói": [
+      "Hospital Universitário Antônio Pedro",
+      "Hospital Santa Cruz",
+      "Hospital Icaraí"
+    ]
+  },
+  "Minas Gerais": {
+    "Belo Horizonte": [
+      "Hospital das Clínicas da UFMG",
+      "Hospital Mater Dei",
+      "Hospital Felício Rocho"
+    ],
+    "Uberlândia": [
+      "Hospital de Clínicas da UFU",
+      "Hospital Santa Genoveva",
+      "Hospital Santa Clara"
+    ]
+  },
+  "Maharashtra": {
+    "Mumbai": [
+      "Bombay Hospital and Medical Research Centre",
+      "Kokilaben Dhirubhai Ambani Hospital",
+      "Tata Memorial Hospital"
+    ],
+    "Pune": [
+      "Ruby Hall Clinic",
+      "Deenanath Mangeshkar Hospital",
+      "Sahyadri Hospitals"
+    ]
+  },
+  "Uttar Pradesh": {
+    "Lucknow": [
+      "Sanjay Gandhi Postgraduate Institute of Medical Sciences",
+      "King George's Medical University",
+      "Ram Manohar Lohia Institute of Medical Sciences"
+    ],
+    "Kanpur": [
+      "Regency Hospital Limited",
+      "Rama Medical College Hospital and Research Centre",
+      "Lal Imli Hospital"
+    ]
+  },
+  "Karnataka": {
+    "Bangalore": [
+      "Apollo Hospitals",
+      "Manipal Hospital",
+      "Columbia Asia Referral Hospital"
+    ],
+    "Mysore": [
+      "Narayana Multispeciality Hospital",
+      "Apollo BGS Hospitals",
+      "Vikram Hospital"
+    ]
+  },
+  "Guangdong": {
+    "Guangzhou": [
+      "The First Affiliated Hospital, Sun Yat-sen University",
+      "Guangdong Provincial People's Hospital",
+      "Guangzhou First People's Hospital"
+    ],
+    "Shenzhen": [
+      "Shenzhen Second People's Hospital",
+      "Shenzhen People's Hospital",
+      "Shenzhen University General Hospital"
+    ]
+  },
+  "Shandong": {
+    "Jinan": [
+      "Qilu Hospital of Shandong University",
+      "Shandong Provincial Hospital",
+      "The Second Hospital of Shandong University"
+    ],
+    "Qingdao": [
+      "Qingdao Municipal Hospital",
+      "The Affiliated Hospital of Qingdao University",
+      "Qingdao Chengyang People's Hospital"
+    ]
+  },
+  "Henan": {
+    "Zhengzhou": [
+      "The First Affiliated Hospital of Zhengzhou University",
+      "Zhongmu County People's Hospital",
+      "The Central Hospital of Zhengzhou"
+    ],
+    "Luoyang": [
+      "Luoyang Central Hospital",
+      "Luoyang Orthopaedic Hospital",
+      "Luoyang People's Hospital"
+    ]
+  },
+  "Tokyo": {
+    "Tokyo": [
+      "University of Tokyo Hospital",
+      "Keio University Hospital",
+      "Tokyo Medical University Hospital"
+    ],
+    "Yokohama": [
+      "Yokohama City University Medical Center",
+      "St. Marianna University School of Medicine Hospital",
+      "Yokohama Municipal Citizen's Hospital"
+    ]
+  },
+  "Osaka": {
+    "Osaka": [
+      "Osaka University Hospital",
+      "Osaka City University Hospital",
+      "Osaka General Medical Center"
+    ],
+    "Kobe": [
+      "Kobe University Hospital",
+      "Kobe City Medical Center General Hospital",
+      "Kobe City General Hospital"
+    ]
+  },
+  "Hokkaido": {
+    "Sapporo": [
+      "Hokkaido University Hospital",
+      "Sapporo Medical University Hospital",
+      "Hokkaido Cancer Center"
+    ],
+    "Asahikawa": [
+      "Asahikawa Medical University Hospital",
+      "Asahikawa Red Cross Hospital",
+      "Hokkaido Asahikawa Kosei Hospital"
+    ]
+  },
+  "Mexico City": {
+    "Mexico City": [
+      "Hospital General de México",
+      "National Institute of Medical Sciences and Nutrition Salvador Zubirán",
+      "ABC Medical Center Santa Fe"
+    ],
+    "Puebla": [
+      "Hospital Puebla",
+      "Hospital Ángeles Puebla",
+      "Hospital Universitario"
+    ]
+  },
+  "Jalisco": {
+    "Guadalajara": [
+      "Hospital Civil de Guadalajara",
+      "Hospital Civil Fray Antonio Alcalde",
+      "Centro Médico Puerta de Hierro"
+    ],
+    "Zapopan": [
+      "Hospital Puerta de Hierro Sur",
+      "Hospital Ángel Leaño",
+      "Hospital Civil Juan I. Menchaca"
+    ]
+  },
+  "Nuevo León": {
+    "Monterrey": [
+      "University Hospital 'Dr. José Eleuterio González'",
+      "Hospital San José Tec de Monterrey",
+      "Hospital OCA"
+    ],
+    "San Nicolás de los Garza": [
+      "Hospital Metropolitano",
+      "Zoé Water Medical Center",
+      "Hospital Universitario UANL"
+    ]
+  },
+  "Gauteng": {
+    "Johannesburg": [
+      "Charlotte Maxeke Johannesburg Academic Hospital",
+      "Netcare Milpark Hospital",
+      "Chris Hani Baragwanath Hospital"
+    ],
+    "Pretoria": [
+      "Steve Biko Academic Hospital",
+      "Netcare Pretoria East Hospital",
+      "Life Eugene Marais Hospital"
+    ]
+  },
+  "Western Cape": {
+    "Cape Town": [
+      "Groote Schuur Hospital",
+      "Netcare Christiaan Barnard Memorial Hospital",
+      "Life Vincent Pallotti Hospital"
+    ],
+    "Stellenbosch": [
+      "Tygerberg Hospital",
+      "Life Stellenbosch Hospital",
+      "Eerste River Hospital"
+    ]
+  },
+  "KwaZulu-Natal": {
+    "Durban": [
+      "Inkosi Albert Luthuli Central Hospital",
+      "Netcare St. Augustine's Hospital",
+      "King Edward VIII Hospital"
+    ],
+    "Pietermaritzburg": [
+      "Grey's Hospital",
+      "Mediclinic Pietermaritzburg",
+      "St Anne's Hospital"
+    ]
+  },
+  "Moscow": {
+    "Moscow": [
+      "Botkin Hospital",
+      "Moscow City Clinical Hospital No. 67",
+      "Pirogov Russian National Research Medical University Hospital"
+    ],
+    "Zelenograd": [
+      "Zelenograd City Hospital",
+      "Zelenograd District Hospital",
+      "Zelenograd Central District Hospital"
+    ]
+  },
+  "Saint Petersburg": {
+    "Saint Petersburg": [
+      "Saint Petersburg State University Clinic",
+      "City Hospital No. 40",
+      "Botkin Hospital"
+    ],
+    "Pushkin": [
+      "Pushkin Central District Hospital",
+      "Pushkin City Hospital",
+      "Pushkin District Hospital No. 1"
+    ]
+  },
+  "Tatarstan": {
+    "Kazan": [
+      "Republican Clinical Hospital",
+      "Republican Clinical Cancer Center",
+      "Republican Clinical Hospital of the Ministry of Internal Affairs"
+    ],
+    "Naberezhnye Chelny": [
+      "City Clinical Hospital No. 1",
+      "City Clinical Hospital No. 2",
+      "City Clinical Hospital No. 3"
+    ]
+  },
+  "Lombardy": {
+    "Milan": [
+      "San Raffaele Hospital",
+      "Niguarda Hospital",
+      "Humanitas Research Hospital"
+    ],
+    "Bergamo": [
+      "Papa Giovanni XXIII Hospital",
+      "Bergamo Hospital",
+      "Seriate Hospital"
+    ]
+  },
+  "Lazio": {
+    "Rome": [
+      "Policlinico Umberto I",
+      "Gemelli University Hospital",
+      "San Camillo-Forlanini Hospital"
+    ],
+    "Latina": [
+      "Santa Maria Goretti Hospital",
+      "San Giovanni di Dio Hospital",
+      "Fondazione Santa Lucia"
+    ]
+  },
+  "Veneto": {
+    "Venice": [
+      "Ospedale Civile di Venezia",
+      "Ospedale dell'Angelo",
+      "Ospedale SS. Giovanni e Paolo"
+    ],
+    "Verona": [
+      "Borgo Trento Hospital",
+      "Sacred Heart Hospital",
+      "Verona University Hospital"
+    ]
+  },
+  "Andalusia": {
+    "Seville": [
+      "Hospital Universitario Virgen del Rocío",
+      "Hospital Virgen Macarena",
+      "Hospital Quirónsalud Sagrado Corazón"
+    ],
+    "Malaga": [
+      "Hospital Regional Universitario de Málaga",
+      "Hospital Quirónsalud Málaga",
+      "Hospital Universitario Virgen de la Victoria"
+    ]
+  },
+  "Madrid": {
+    "Madrid": [
+      "Hospital Universitario La Paz",
+      "Hospital Gregorio Marañón",
+      "Hospital Clínico San Carlos"
+    ],
+    "Alcalá de Henares": [
+      "Hospital Universitario Príncipe de Asturias",
+      "Hospital Universitario de Torrejón",
+      "Hospital Universitario Ramón y Cajal"
+    ]
+  },
+  "Buenos Aires": {
+    "Buenos Aires": [
+      "Hospital Italiano de Buenos Aires",
+      "Hospital de Clínicas José de San Martín",
+      "Hospital Alemán"
+    ],
+    "La Plata": [
+      "Hospital Interzonal General de Agudos Evita",
+      "Hospital San Martín",
+      "Policlínico San Martín"
+    ]
+  },
+  "Córdoba": {
+    "Córdoba": [
+      "Hospital Privado Universitario de Córdoba",
+      "Hospital Nacional de Clínicas",
+      "Hospital de Niños Dr. Ricardo Gutiérrez"
+    ],
+    "Río Cuarto": [
+      "Hospital San Antonio de Padua",
+      "Hospital Provincial de Río Cuarto",
+      "Clínica Privada Independencia"
+    ]
+  },
+  "Santa Fe": {
+    "Santa Fe": [
+      "Hospital José María Cullen",
+      "Hospital Iturraspe",
+      "Hospital J. B. Iturraspe"
+    ],
+    "Rosario": [
+      "Hospital Provincial del Centenario",
+      "Hospital de Niños Víctor J. Vilela",
+      "Sanatorio Británico"
+    ]
+  },
+  "West Java": {
+    "Bandung": [
+      "RSUP Dr. Hasan Sadikin Bandung",
+      "RS Santo Borromeus",
+      "RS Advent Bandung"
+    ],
+    "Bogor": [
+      "RSUD Kota Bogor",
+      "RSUD Ciawi",
+      "RSIA Bunda Aliyah"
+    ]
+  },
+  "East Java": {
+    "Surabaya": [
+      "RSUD Dr. Soetomo",
+      "RSUD Dr. Ramelan",
+      "RSUD Dr. Sutomo"
+    ],
+    "Malang": [
+      "RSUD Kota Malang",
+      "RSU Panti Nirmala",
+      "RSUD Dr. Saiful Anwar"
+    ]
+  },
+  "Central Java": {
+    "Semarang": [
+      "RSUD Dr. Kariadi",
+      "RS Telogorejo",
+      "RS Panti Wilasa Citarum"
+    ],
+    "Solo": [
+      "RSUD Dr. Moewardi",
+      "RSK Bedah DKT Solo",
+      "RS Kasih Ibu Solo"
+    ]
+  },
+  "Lagos": {
+    "Lagos": [
+      "Lagos University Teaching Hospital",
+      "Reddington Hospital",
+      "St. Nicholas Hospital"
+    ],
+    "Ikeja": [
+      "Lagos State University Teaching Hospital",
+      "Ikeja Medical Center",
+      "Folabi Medical Center"
+    ]
+  },
+  "Kano": {
+    "Kano": [
+      "Murtala Muhammed Specialist Hospital",
+      "Aminu Kano Teaching Hospital",
+      "Muhammad Abdullahi Wase Specialist Hospital"
+    ],
+    "Gwale": [
+      "Gwale Maternity and Child Clinic",
+      "Murtala Muhammed Library Clinic",
+      "Gwale General Hospital"
+    ]
+  },
+  "Oyo": {
+    "Ibadan": [
+      "University College Hospital, Ibadan",
+      "Moloney Specialist Hospital",
+      "Ladkem Eye Hospital"
+    ],
+    "Ogbomoso": [
+      "Bowen University Teaching Hospital",
+      "Baptist Medical Centre",
+      "Ogbomoso General Hospital"
+    ]
+  },
+  "Riyadh": {
+    "Riyadh": [
+      "King Abdulaziz Medical City",
+      "King Fahad Medical City",
+      "King Saud University Medical City"
+    ],
+    "Al-Kharj": [
+      "King Khalid Hospital - Al-Kharj",
+      "Al-Kharj Central Hospital",
+      "Al Kharj Military Hospital"
+    ]
+  },
+  "Makkah": {
+    "Mecca": [
+      "King Abdullah Medical City",
+      "Hira General Hospital",
+      "Al Noor Specialist Hospital"
+    ],
+    "Jeddah": [
+      "King Abdulaziz University Hospital",
+      "Dr. Erfan and Bagedo General Hospital",
+      "King Faisal Specialist Hospital"
+    ]
+  },
+  "Eastern Province": {
+    "Dammam": [
+      "King Fahd Hospital of the University",
+      "Specialized Medical Center Hospital",
+      "Almana General Hospital"
+    ],
+    "Al Khobar": [
+      "Almana General Hospital",
+      "Dr. Sulaiman Al Habib Hospital",
+      "Almana General Hospital"
+    ]
+  },
+  "Cairo": {
+    "Cairo": [
+      "Ain Shams University Hospitals",
+      "Cairo University Hospitals",
+      "Kasr El Ainy Hospitals"
+    ],
+    "Giza": [
+      "Agouza Hospital",
+      "Al Haram Hospital",
+      "Imbaba Hospital"
+    ]
+  },
+  "Alexandria": {
+    "Alexandria": [
+      "Alexandria University Hospitals",
+      "El Hadara Maternity University Hospitals",
+      "El-Mamoura Chest Hospital"
+    ],
+    "Borg El Arab": [
+      "Borg El Arab General Hospital",
+      "Borg El Arab Medical Center",
+      "Borg El Arab Specialized Hospital"
+    ]
+  },
+  "Giza": {
+    "Giza": [
+      "Kasr Al Ainy Hospitals",
+      "Sheikh Zayed Specialized Hospital",
+      "Al-Safa Hospital"
+    ],
+    "6th of October City": [
+      "October 6 University Hospital",
+      "Dar El Fouad Hospital",
+      "Sphinx International Airport Hospital"
+    ]
+  }
+};
+
+function populateDropdown(dropdown, options) {
+  dropdown.innerHTML = '<option value="">-- Select --</option>';
+  options.forEach(function(option) {
+    var optionElement = document.createElement('option');
+    optionElement.value = option;
+    optionElement.textContent = option;
+    dropdown.appendChild(optionElement);
+  });
+}
+
+
+stateDropdown.addEventListener('change', function() {
+  var selectedState = this.value;
+  if (selectedState) {
+
+    cityDropdown.disabled = false;
+
+    populateDropdown(cityDropdown, Object.keys(citiesAndHospitals[selectedState]));
+  } else {
+
+    cityDropdown.disabled = true;
+    hospitalDropdown.disabled = true;
+    populateDropdown(cityDropdown, []);
+    populateDropdown(hospitalDropdown, []);
+  }
+});
+
+cityDropdown.addEventListener('change', function() {
+  var selectedState = stateDropdown.value;
+  var selectedCity = this.value;
+  if (selectedCity) {
+ 
+    hospitalDropdown.disabled = false;
+ 
+    populateDropdown(hospitalDropdown, citiesAndHospitals[selectedState][selectedCity]);
+  } else {
+ 
+    hospitalDropdown.disabled = true;
+    populateDropdown(hospitalDropdown, []);
+  }
+});
+
+      
+      var dropdown1 = document.getElementById('question1');
+      var dropdown2 = document.getElementById('hospital');
+      var dropdown3 = document.getElementById('question3');
+      
+      dropdown2.addEventListener('change', function() {
+        if (this.value) { 
+          dropdown3.disabled = false;
+        } else {
+          dropdown3.disabled = true;
+          dropdown3.selectedIndex = 0; 
+        }
+      });
+      
+      var submitButton = document.getElementById('submitButton');
+          submitButton.addEventListener('click', function() {
+            window.location.href = "Book Appointment 2 Final Page.html";
+      });
+      
+      var form = document.getElementById('myForm');
+var submitButton = document.getElementById('submitButton');
+
+function allFieldsFilled() {
+  var allFilled = true;
+
+  var textInputs = form.querySelectorAll('input[type="text"], input[type="email"], input[type="number"]');
+  textInputs.forEach(function(input) {
+    if (input.value.trim() === '') {
+      allFilled = false;
+    }
+  });
+
+  var selectInputs = form.querySelectorAll('select');
+  selectInputs.forEach(function(select) {
+    if (!select.value) {
+      allFilled = false;
+    }
+  });
+
+  return allFilled;
+}
+
+form.addEventListener('input', function() {
+  submitButton.disabled = !allFieldsFilled();
+});
+
+
+var form = document.getElementById('myForm');
+var submitButton = document.getElementById('submitButton');
+
+function allFieldsFilled() {
+  var allFilled = true;
+
+  var textInputs = form.querySelectorAll('input[type="text"], input[type="email"], input[type="number"]');
+  textInputs.forEach(function(input) {
+    if (input.value.trim() === '') {
+      allFilled = false;
+      input.classList.add('unfilled'); 
+    } else {
+      input.classList.remove('unfilled'); 
+    }
+  });
+
+  var selectInputs = form.querySelectorAll('select');
+  selectInputs.forEach(function(select) {
+    if (!select.value) {
+      allFilled = false;
+      select.classList.add('unfilled'); 
+    } else {
+      select.classList.remove('unfilled'); 
+    }
+  });
+
+  return allFilled;
+}
+
+form.addEventListener('input', function() {
+  submitButton.disabled = !allFieldsFilled();
+});
+</script>
+  </td>
+  </tr>
+  </table>
+</body>
+</html>
