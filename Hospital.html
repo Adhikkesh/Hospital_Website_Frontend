@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hospital</title>
+
+    <link rel="icon" href="/" type="image/icon type">
+
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="img_slider.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="category.css">
+    <link rel="stylesheet" href="Clinical.css">
+    <link rel="stylesheet" href="Location.css">
+    <link rel="stylesheet" href="footer.css">
+    
+    <script src="./Hospital.js"></script>
+    <script src="./signup.js"></script>
+    <script src="./Location.js"></script>
+    <script src="./electron.js"></script>
+
+  </head>
+  <body>
+    <div class="header">
+      <div class="left">
+        <div class="img-div"><img class="img" src="./image/logo_skar.jpg"></div>
+      </div>
+      
+      <div class="middle">
+        <input class="search" placeholder="Search Doctor or Hospital">
+        
+        <button class="search-icon-button" type="submit">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+
+      <div class="right">
+
+         <div class="right1">
+           <div class="emergency-text">Emergency</div>
+           <div>
+             <button class="emergency-button">
+               <i class="fa fa-phone" style="font-size:22px;margin-left:8px"></i>
+               <p class="phone-text">1066</p>
+             </button>
+           </div>
+         </div>
+
+         <div class="right2">
+          <div class="emergency-text">Apollo Lifeline</div>
+           <div>
+             <button class="emergency-button">
+               <i class="fa fa-phone" style="font-size:22px;margin-left:8px"></i>
+               <p class="phone-text">1860-500-1066</p>
+             </button>
+           </div>
+         </div>
+
+
+         <div id="customername" class="customername">
+          <img class="profile-gif" src="./image/profile.gif">
+          <div>
+            <p class="customer-welcome">Welcome,</p>
+          <div class="profilename" id="profilename"></div>
+          </div>
+         </div>
+
+      </div>
+    </div>
+
+    <div class="menu-bar">
+      <ul>
+        <li><a href="./Find A Doctor.html">Find a Doctor</a>
+        </li>
+        <li><a href="#">Centers of Excellence &#x25BE;</a>
+          <div class="dropdown-menu">
+            <ul>
+              <li><a href="./CARDIOLOGY.html">Cardiology</a></li>
+              <li><a href="./STENTS.html">Stent</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#">Health Information &#x25BE;</a>
+          <div class="dropdown-menu">
+            <ul>
+              <li><a href="./Diseases and Conditions.html">Diseases and Conditions</a></li>
+              <li><a href="./Procedure.html">Procedures</a></li>
+              <li><a href="./Health Technology.html">Health Technology</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#">International patient &#x25BE;</a>
+          <div class="dropdown-menu">
+            <ul>
+              <li><a href="./international_patient.html">Plan Your Trip</a></li>
+              <li><a href="./consult_online_varun.html">Online Consultation</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#">Academics & Research &#x25BE;</a>
+          <div class="dropdown-menu">
+            <ul>
+              <li><a href="./honors_list.html">Honors List</a></li>
+              <li><a href="./new_in_medicine.html">New in Medicine</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="./contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+
+    <div class="body-div">
+      <div class="content">
+        <div class="images">
+          <img class="slide" src="./img_slider_images/P1.jpg" alt="img_1">
+          <img class="slide" src="./img_slider_images/P2.jpg" alt="img_2">
+          <img class="slide" src="./img_slider_images/P3.jpg" alt="img_3">
+          <img class="slide" src="./img_slider_images/P4.webp" alt="img_4">
+          <img class="slide" src="./img_slider_images/P4.webp" alt="img_5">
+        </div>
+
+        <button class="prev" onclick="prevSlide()">&#10094</button>
+
+        <button class="next" onclick="nextSlide()">&#10095</button>
+
+      </div>
+
+      <script src="img_slider.js"></script>
+    </div>
+
+
+    <!-- Buttons -->
+    <div class="button-container">
+      <div class="but" onclick="window.location = './Book Appointment.html' ">
+        <img class="but-img" src="./image/Book_Appointment_pic.png">
+        <p class="but-text">Book Appointment</p>
+      </div>
+
+      <div class="but" onclick="window.location = './consult_online.html'">
+        <img class="but-img" src="./image/stethoscope.png">
+        <p class="but-text">Consult Online</p>
+      </div>
+
+        <div class="but" id="butrediv" onclick="window.location = './Medicine.html'">
+          <img class="but-img" src="./image/Medicine.png">
+          <p class="but-text">Buy Medicine</p>
+        </div>
+
+        <div class="but" id="butrediv" onclick="window.location = './bookhealthcheckup.html'">
+          <img class="but-img" src="./image/Book_Appointment_pic.png">
+          <p class="but-text">Book Health Check Up</p>
+        </div>
+
+    </div>
+
+    <div class="floating">
+      <img src="./image/Call-gif.gif" class="call-gif">
+      <p class="call-text">Call Now</p>
+    </div>
+
+    <div class="clinical">
+
+      <div class="speciality-div">
+        <div class="speciality">
+          <h1 class="heading-speciality">An Ecosystem for Clinical Excellence</h1>
+          <div class="special">Specialities</div>
+        </div>
+  
+        <div class="speciality-button-div">
+  
+          <div class="speciality-button" onclick="window.location = './Cardiology_goku.html' ">
+            <img src="./image/ecg-monitor.gif" class="speciality-button-img">
+            <p class="speciality-button-text">Cardiology</p>
+          </div>
+  
+          <div class="speciality-button" onclick="window.location = './Neurologist.html' ">
+            <img src="./image/Neuro.gif" class="speciality-button-img">
+            <p class="speciality-button-text">Neurology</p>
+          </div>
+  
+          <div class="speciality-button" onclick="window.location = './Diseases-doctor.html' ">
+            <img src="./image/stomach.gif" class="speciality-button-img">
+            <p class="speciality-button-text">Gastroenterology</p>
+          </div>
+  
+          <div class="speciality-button" onclick="window.location = './Orthopedician.html' ">
+            <img src="./image/Ortho.gif" class="speciality-button-img">
+            <p class="speciality-button-text">Orthopaedic</p>
+          </div>
+  
+          <div class="speciality-button" onclick="window.location = './ENT.html' ">
+            <img src="./image/oncology.gif" class="speciality-button-img">
+            <p class="speciality-button-text">Ent</p>
+          </div>
+  
+          <div class="speciality-button" onclick="window.location = './pediatrics.html' ">
+            <img src="./image/gynecology.gif" class="speciality-button-img">
+            <p class="speciality-button-text">Pediatrics</p>
+          </div>
+  
+          <div class="speciality-button" onclick="window.location = './Psychiatrist.html' ">
+            <img src="./image/dermatology.gif" class="speciality-button-img">
+            <p class="speciality-button-text">Psychiatry</p>
+          </div>
+  
+          <div class="speciality-button" onclick="window.location = './dentistrydoctors.html' ">
+            <img src="./image/opthpology.gif" class="speciality-button-img">
+            <p class="speciality-button-text">Dentistry</p>
+          </div>
+  
+        </div>
+      </div>
+      
+
+      <div class="doctor-gif">
+        <img class="doctor-gif-class" src="./image/doctor-gif.webp">
+      </div>
+    </div>
+
+    <!-- Location -->
+
+    <p class="loc-text">Location</>
+    <h1 style="margin-left: 30px">Hospitals In India</h1>
+    <div class="location-div">
+      
+      <div class="location-button-container">
+
+        <div class="location-button" onclick="imageshower(1)">
+          <img src="./image/ahmedabad_city.svg" class="location-img">
+          <p class="location-text">Ahmedabad</p>
+        </div>
+
+        <div class="location-button" onclick="imageshower(2)">
+          <img src="./image/chennai_city.svg" class="location-img">
+          <p class="location-text">Chennai</p>
+        </div>
+
+        <div class="location-button" onclick="imageshower(3)">
+          <img src="./image/delhi_city.svg" class="location-img">
+          <p class="location-text">Delhi</p>
+        </div>
+
+        <div class="location-button" onclick="imageshower(4)">
+          <img src="./image/madurai_city.svg" class="location-img">
+          <p class="location-text">Madurai</p>
+        </div>
+
+      </div>
+
+      <div class="side-img-container">
+        <img src="./image/Ahmedabad_Hospital_1.jpg" id="Hospital_Image" class="image">
+      </div>
+    </div>
+
+
+
+
+    <div class="footer">
+      
+      <div class="logo_img_foot">
+        <img src="./image/logo_skar.png">
+        <div class="phone_details">
+
+          <div>
+            <i class="fa fa-phone" style="color: rgb(233, 106, 37);font-size:16px"></i>
+            <div>
+              <p>Emergency</p>
+              <p class="number-foot"><a href="#">1066</a></p>
+            </div>
+            
+          </div>
+
+          <div>
+            <i class="fa fa-phone" style="color: rgb(233, 106, 37);font-size:16px"></i>
+            <div>
+              <p>Apollo Lifeline International</p>
+              <p class="number-foot"><a href="#">+91 4043441066</a></p>
+            </div>
+            
+          </div>
+
+          <div>
+            <i class="fa fa-phone" style="color: rgb(233, 106, 37);font-size:16px"></i>
+            <div>
+              <p>Health Help Line</p>
+              <p class="number-foot"><a href="#">1860-5001066</a></p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="foot-container">
+
+        <div class="Category-head-foot">
+          <h5><a href="./Find A Doctor.html" style="text-decoration: none;color: white">Find a Doctor</a></h5>
+          <!-- <ul>
+            <li>Find a Doctor</li>
+            <li>Find a Doctor</li>
+            <li>Find a Doctor</li>
+          </ul> -->
+        </div> 
+
+        <div class="Category-head-foot">
+          <h5>Center of Excellence</h5>
+          <ul>
+            <li><a href="./CARDIOLOGY.html">Cardiology</a></li>
+            <li><a href="./STENTS.html">Cardiology</a></li>
+          </ul>
+        </div>
+
+        <div class="Category-head-foot">
+          <h5>Health Information</h5>
+          <ul>
+            <li><a href="./Diseases and Conditions.html">Diseases and Conditions</a></li>
+            <li><a href="./Procedure.html">Procedures</a></li>
+            <li><a href="./Health Technology.html">Health Technology</a></li>
+          </ul>
+        </div>
+
+        <div class="Category-head-foot">
+          <h5>International Patient</h5>
+          <ul>
+            <li><a href="./international_patient.html">Plan your Trip</a></li>
+            <li><a href="#">Online Consultation</a></li>
+          </ul>
+        </div>
+        
+      </div>
+
+      <div class="foot-container_1">
+
+        <div class="Category-head-foot">
+          <h5>Academics & Research</h5>
+          <ul>
+            <li><a href="./honors_list.html">Honors List</a></li>
+            <li><a href="./new_in_medicine.html">New in Medicine</a></li>
+          </ul>
+        </div>
+
+        <!-- <div class="Category-head-foot">
+          <h5>International Patients</h5>
+          <ul>
+            <li>Find a Doctor</li>
+            <li>Find a Doctor</li>
+            <li>Find a Doctor</li>
+          </ul>
+        </div> -->
+        <div class="Category-head-foot">
+          <h5><a href="./PostQuery/contactus.html" style="text-decoration: none;color: white">Contact Us</a></h5>
+        </div>
+
+      </div>
+
+      <div class="social-media">
+        <h2>Follow Us on</h1>
+        <a href="https://www.facebook.com/Cristiano"><img src="./image/facebook.png"></a>
+        <a href="https://www.instagram.com/cristiano/?hl=en"><img src="./image/Instagram.png"></a>
+        <a href="https://www.youtube.com/@MrBeast/videos"><img src="./image/youtube.png"></a>
+        <a href="https://www.whatsapp.com/"><img src="./image/whatsapp.png"></a>
+      </div>
+       
+
+      </div>
+
+
+    </div>
+
+
+
+    
+    
+  </body>
+</html>

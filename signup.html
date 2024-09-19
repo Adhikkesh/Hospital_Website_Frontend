@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap" rel="stylesheet">
+
+    <script src="./electron.js"></script>
+</head>
+<body>
+
+    <div class="Hospital">
+        <p>SKAR HOSPITAL</p>
+        <img src="./image/logo_skar.png">
+    </div>
+
+    <div class="form-div">
+        <h1>Login</h1>
+        <form  onsubmit=" return validateform()" action="./Hospital.html">
+            <div class="input-box">
+                <label>
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
+                    <div id="username-error" class="username-error"></div>
+                </label>
+            </div>
+
+            <div class="input-box">
+                <label>
+                    <input type="password" id="password" name="password" placeholder="password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                    <div id="password-error" class="password-error"></div>
+                </label>
+            </div>
+
+            <div class="remember-box">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">forgot password?</a>
+            </div>
+
+            <input type="submit"  class="btn" value="Login">
+
+            <div class="register-link">
+                <p>Don't have an account?<a href="#">Register</a></p>
+                
+            </div>
+           
+        </form>
+
+    </div>
+
+    <script type="text/javascript" src="./signup.js"></script>
+</body>
+</html>

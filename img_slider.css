@@ -1,0 +1,152 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.body-div{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  min-height:100vh;
+  text-align: center;
+  padding:0;
+}
+
+.content{
+    height:600px;
+    overflow: hidden;
+    position:relative;
+}
+
+.content img{
+    width:100%;
+    display:none;
+
+}
+
+img.displaySlide{
+    display:block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.content button{
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 2rem;
+
+    padding: 10px 15px;
+
+    background-color: hsla(0, 0%, 0%, 0.5);
+
+    color: white;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.prev{
+    left:0;
+}
+.next{
+    right:0;
+}
+@keyfram fade{
+    from {opacity: .5}
+
+    to {opacity: 1}
+
+}
+
+/* .images img{
+    height:100%;
+    width:100%;
+}
+
+.btm-sliders{
+    position:absolute;
+    bottom:20px;
+    left:50%;
+    display:flex;
+    transform: translateX(-50%);
+}
+
+.btm-sliders span{
+    height:15px;
+    width:50px;
+    border:2px solid black;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.content .slide{
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width:45px;
+    height:45px;
+    border:2px solid white;
+    background:rgba(255,255,255,0.1);
+    cursor: pointer;
+}
+.slide span{
+    font-size: 35px;
+    color:white;
+    line-height: 41px;
+}
+
+.content .right{
+    right:0;
+} */
+
+
+/* button */
+
+.button-container{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+
+}
+
+.button-container .but{
+    background-color: white;
+    border:none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    width: 175px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button-container .but .but-img{
+    width:40px;
+    height:40px;
+    margin-bottom: 25px;
+}
+
+.button-container .but .but-text{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.button-container .but:hover{
+    background-color: rgb(57, 140, 224);
+    color: gold;
+}
+
+
+
